@@ -6,4 +6,5 @@ Tech overview:
 2. Styled Components
 3. Compound Components - Design Pattern
 4. Firebase for authentication and data storage
-5. and more...
+5. Tree shaking
+6. and more...
