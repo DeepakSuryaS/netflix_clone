@@ -20,6 +20,7 @@ export const Input = styled.input`
   padding: 10px;
   height: 70px;
   box-sizing: border-box;
+  border-radius: 2px 0 0 2px;
 `
 
 export const Button = styled.button`
@@ -28,16 +29,16 @@ export const Button = styled.button`
   height: 70px;
   background: #e50914;
   color: white;
-  text-transform: uppercase;
   padding: 0 32px;
-  font-size: 26px;
+  font-size: 30px;
   border: 0;
   cursor: pointer;
+  border-radius: 0 2px 2px 0;
 
   img {
     margin-left: 10px;
     filter: brightness(0) invert(1);
-    width: 24px;
+    width: 20px;
 
     @media (max-width: 600px) {
       width: 16px;
