@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import { GlobalStyles } from './global-styles'
 import { App } from './app';
 import { FirebaseContext } from './context/firebase'
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyBeI_Xne0l6QjylBw5CCNvuEJi_sdyt4S4",
@@ -14,11 +17,11 @@ const firebaseConfig = {
   //databaseURL: 'https://netflix-c8ae9.firebaseio.com'
 }
 
-//const firebase = window.firebase.initializeApp(firebaseConfig)
+const firebaseInit = firebase.initializeApp(firebaseConfig)
 
 ReactDOM.render(
   <>
-    <FirebaseContext.Provider value={{ firebase: window.firebase }}>
+    <FirebaseContext.Provider value={{ firebase: firebase }}>
       <GlobalStyles />
       <App />
     </FirebaseContext.Provider>
