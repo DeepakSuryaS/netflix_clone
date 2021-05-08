@@ -1,20 +1,19 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { useHistory } from 'react-router-dom'
+import { FirebaseContext } from '../context/firebase'
 import { Form } from '../components'
 import { HeaderContainer } from '../containers/header'
 import { FooterContainer } from '../containers/footer'
 import * as ROUTES from '../constants/routes'
 
+
 export default function Signin() {
-  const [error, setError] = useState('')
+  const history = useHistory()
+  const { firebase } = useContext(FirebaseContext)
+
   const [emailAddress, setEmailAddress] = useState('')
   const [password, setPassword] = useState('')
-
-  const handleSignin = (event) => {
-    event.preventDefault();
-
-    // call firebase to authenticate user
-    // populate error if any
-  }
+  const [error, setError] = useState('')
 
   const validateField = (value, field) => {
     const errorMsg = 'Please check your email and/or password'
@@ -30,6 +29,20 @@ export default function Signin() {
     }
 
     valid ? setError('') : setError(errorMsg);
+  }
+
+  const handleSignin = (event) => {
+    event.preventDefault();
+
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(emailAddress, password)
+      .then(() => {
+        setEmailAddress('')
+        setPassword('')
+        setError('')
+        history.push(ROUTES.BROWSE)
+      }).catch(error => setError(error.message))
   }
 
   return (
