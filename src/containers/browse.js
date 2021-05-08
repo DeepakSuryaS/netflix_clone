@@ -7,6 +7,7 @@ import { FooterContainer } from './footer'
 
 export function BrowseContainer() {
   const [category, setCategory] = useState('series')
+  const [searchTerm, setSearchTerm] = useState('')
   const [profile, setProfile] = useState({})
   const [loading, setLoading] = useState(false)
 
@@ -33,6 +34,9 @@ export function BrowseContainer() {
             >
               Films
             </Header.Link>
+          </Header.Group>
+          <Header.Group>
+            <Header.Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
           </Header.Group>
         </Header.Frame>
 
