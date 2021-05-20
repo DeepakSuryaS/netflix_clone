@@ -287,3 +287,6 @@ Project Link: [https://github.com/DeepakSuryaS/netflix_clone](https://github.com
 
 - [The Frontend Developer Career Path](https://scrimba.com/learn/frontend)
 - [Karl Hadwen](https://twitter.com/karlhadwen)
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/deepaksuryas/
