@@ -1,16 +1,3 @@
-# netflix_clone
-Netflix clone using ReactJs
-
-Tech overview:
-1. ReactJs
-2. Styled Components
-3. Compound Components - Design Pattern
-4. Firebase for authentication and data storage
-5. Tree shaking
-6. and more...
-
-
-
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -22,7 +9,7 @@ Tech overview:
     <a href="https://github.com/DeepakSuryaS/netflix_clone"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://netflix-mk.netlify.app/">View Demo</a>
+    <a href="https://deepaksuryas-netflix.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/DeepakSuryaS/netflix_clone/issues">Report Bug</a>
     ·
@@ -60,7 +47,7 @@ Tech overview:
 ## About The Project
 
 <p align="center">
-  <a href="https://netflix-mk.netlify.app/">
+  <a href="https://deepaksuryas-netflix.netlify.app/">
     <img src="./public/images/screenshots/home.png" alt="Logo" width="" height="">
   </a>
 </p>
@@ -71,7 +58,7 @@ Tech overview:
 - [styled-components](https://styled-components.com/)
 - [React Router](https://reactrouter.com/)
 - [Firebase](https://firebase.google.com/)
-- [Design Pattern](Compound components)
+- Design Pattern - Compound components
 
 <!-- GETTING STARTED -->
 
