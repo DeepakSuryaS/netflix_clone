@@ -4,10 +4,11 @@ export const Title = styled.p`
   font-size: 24px;
   color: #e5e5e5;
   font-weight: bold;
-  margin-left: 56px;
-  margin-right: 56px;
-  margin-top: 0;
-`;
+  width: 95%;
+  max-width: 1245px;
+  margin: 20px auto;
+  z-index: 0;
+`
 
 export const Container = styled.div`
   display: flex;
@@ -15,109 +16,78 @@ export const Container = styled.div`
   margin-bottom: 50px;
   box-sizing: border-box;
   
-  > ${Title} {
-    @media (max-width: 1000px) {
-      margin-left: 30px;
-    }
-  }
-  
   &:last-of-type {
     margin-bottom: 0;
   }
-`;
+`
 
 export const Group = styled.div`
   display: flex;
   flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
   ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
   ${({ margin }) => margin && `margin: ${margin}`};
-  
-  > ${Container}:first-of-type {
-    @media (min-width: 1100px) {
-      margin-top: -150px;
-    }
-  }
-`;
+`
 
 export const SubTitle = styled.p`
   font-size: 12px;
   color: white;
   font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 0;
   user-select: none;
   display: none;
-`;
+`
 
 export const Text = styled.p`
-  margin-top: 5px;
-  font-size: 10px;
+  font-size: 12px;
   color: white;
-  margin-bottom: 0;
   user-select: none;
   display: none;
   line-height: normal;
-`;
+`
 
 export const Entities = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+  width: 95%;
+  max-width: 1245px;
+  margin: 0 auto;
+`
 
 export const Meta = styled.div`
   display: none;
   position: absolute;
+  width: 100%;
   bottom: 0;
-  padding: 10px;
+  padding: 0 10px;
   background-color: #0000008f;
-`;
+  box-sizing: border-box;
+`
 
 export const Image = styled.img`
   border: 0;
   width: 100%;
-  max-width: 305px;
   cursor: pointer;
   height: auto;
   padding: 0;
   margin: 0;
-`;
+`
 
 export const Item = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 5px;
   position: relative;
   cursor: pointer;
-  transition: transform 0.2;
-  
-  &:hover {
-    transform: scale(1.3);
-    z-index: 99;
-  }
-  
+  transition: all 0.5s;
   @media (min-width: 1000px) {
-    &:hover ${Meta}, &:hover ${Text}, &:hover ${SubTitle} {
+    &:hover {
+      transform: scale(1.2);
+      z-index: 99;
+    }
+    &:hover ${Meta}, &:hover ${SubTitle}, &:hover ${Text} {
       display: block;
-      z-index: 100;
     }
   }
-  
-  &:first-of-type {
-    margin-left: 56px;
-    
-    @media (max-width: 1000px) {
-      margin-left: 30px;
-    }
-  }
-  
-  &:last-of-type {
-    margin-right: 56px;
-    
-    @media (max-width: 1000px) {
-      margin-right: 30px;
-    }
-  }
-`;
+`
 
 export const FeatureText = styled.p`
   font-size: 18px;
@@ -128,7 +98,7 @@ export const FeatureText = styled.p`
   @media (max-width: 800px) {
     line-height: 22px;
   }
-`;
+`
 
 export const Feature = styled.div`
   display: flex;
@@ -136,7 +106,6 @@ export const Feature = styled.div`
   background: url(${({ src }) => src});
   background-size: contain;
   position: relative;
-  height: 360px;
   background-position-x: right;
   background-repeat: no-repeat;
   background-color: black;
@@ -154,11 +123,12 @@ export const Feature = styled.div`
       font-size: 14px;
     }
   }
-`;
+`
 
 export const FeatureTitle = styled(Title)`
   margin-left: 0;
-`;
+  color: #fff;
+`
 
 export const FeatureClose = styled.button`
   color: white;
@@ -170,10 +140,10 @@ export const FeatureClose = styled.button`
   border: 0;
   
   img {
-      filter: brightness(0) invert(1);
-      width: 24px;
+    filter: brightness(0) invert(1);
+    width: 24px;
   }
-`;
+`
 
 export const Content = styled.div`
   margin: 56px;
@@ -181,10 +151,10 @@ export const Content = styled.div`
   line-height: normal;
   
   @media (max-width: 1000px) {
-      margin: 30px;
-      max-width: none;
+    margin: 30px;
+    max-width: none;
   }
-`;
+`
 
 export const Maturity = styled.div`
   background-color: ${({ rating }) => (rating >= 15 ? 'red' : 'green')};
@@ -195,6 +165,6 @@ export const Maturity = styled.div`
   color: white;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  margin-right: 10px;
+  margin: 0 10px 10px 0;
   font-size: 12px;
-`;
+`
